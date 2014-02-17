@@ -1,6 +1,5 @@
 // @JUDGE_ID:  1000AA  100  Java  "Easy algorithm"
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -69,16 +68,7 @@ class Main {
 			inputs.add(list);
 		}
 		keyboard.close();
-		/*
-		while ((testCase = ReadLn (255)) != null) {
-			tokenizer = new StringTokenizer(testCase);
-			list = new ArrayList<Integer>(2);
-			while (tokenizer.hasMoreTokens()) {
-				list.add(Integer.parseInt(tokenizer.nextToken()));
-			}
-			inputs.add(list);
-		}
-		*/
+		
 		ListIterator<List<Integer>> it = inputs.listIterator();
 		Solver solver = new Solver();
 		while (it.hasNext()) {
@@ -99,24 +89,4 @@ class Main {
 	public static void main(String[] args) {
 		run();
 	}
-	/*
-	static String ReadLn(int maxLength) {  // utility function to read from stdin,
-        // Provided by Programming-challenges, edit for style only
-		byte line[] = new byte [maxLength];
-		int length = 0;
-		int input = -1;
-		try {
-			while (length < maxLength) {//Read untill maxlength
-				input = System.in.read();
-				if ((input < 0) || (input == '\n')) break; //or untill end of line ninput
-				line [length++] += input;
-			}
-			
-			if ((input < 0) && (length == 0)) return null;  // eof
-			return new String(line, 0, length);
-		} catch (IOException e){
-			return null;
-		}
-	}
-	*/
 }
